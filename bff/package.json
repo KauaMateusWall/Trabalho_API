@@ -1,0 +1,17 @@
+{
+  "name": "bff",
+  "version": "1.0.0",
+  "description": "Backend-for-Frontend para aplicação mobile responsiva.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "axios": "^1.7.2",
+    "cors": "^2.8.5"
+  }
+}

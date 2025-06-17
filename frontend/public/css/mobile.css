@@ -1,0 +1,167 @@
+/* Mobile-first: Estilos padrão para telas pequenas (smartphones) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mobile-container {
+    width: 100%;
+    max-width: 450px; /* Limite para simular um dispositivo mobile */
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 100vh; /* Ocupa toda a altura da viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+main {
+    flex-grow: 1; /* Ocupa espaço disponível */
+    padding: 20px;
+    overflow-y: auto; /* Permite scroll se o conteúdo for grande */
+}
+
+/* Home Screen */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-right: 15px;
+}
+
+.card-content h3 {
+    margin: 0 0 5px 0;
+    color: #007bff;
+    font-size: 1.1em;
+}
+
+.card-content p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.loading-message, .error-message {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+.error-message {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.link-button {
+    display: block;
+    width: calc(100% - 40px); /* Ajuste para o padding do main */
+    padding: 12px 20px;
+    margin: 20px auto;
+    background-color: #28a745;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.link-button:hover {
+    background-color: #218838;
+}
+
+/* Detail Screen */
+.detail-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.detail-card img.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+    margin-bottom: 15px;
+}
+
+.detail-card h2 {
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.detail-card p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.weather-info {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.weather-info h3 {
+    color: #007bff;
+}
+
+/* Media Queries para Tablets e Desktops */
+@media (min-width: 600px) {
+    .mobile-container {
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        min-height: auto;
+    }
+
+    header {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
+
+@media (min-width: 900px) {
+    .mobile-container {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+    .card {
+        padding: 25px;
+    }
+    .card-content h3 {
+        font-size: 1.2em;
+    }
+    .card-content p {
+        font-size: 1em;
+    }
+    .detail-card {
+        padding: 30px;
+    }
+}
